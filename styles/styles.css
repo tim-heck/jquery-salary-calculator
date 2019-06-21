@@ -15,8 +15,16 @@ header {
     padding: 20px 40px;
 }
 
-input:first-child {
+form input:first-child {
     margin-left: 0;
+}
+
+form input:last-child {
+    margin-right: 0;
+}
+
+form div:last-child {
+    margin-top: 8px;
 }
 
 input {
