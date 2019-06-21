@@ -1,0 +1,25 @@
+html, body {
+    background-color: #eee;
+}
+
+header {
+    background-color: #05204A;
+    color: #fff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 40px;
+}
+
+input:first-child {
+    margin-left: 0;
+}
+
+input {
+    margin: 0 5px;
+    border: 1px solid #000;
+}

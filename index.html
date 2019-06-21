@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weekend Challenge 1</title>
+    <script src="vendor/jquery-3.4.1.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">Salary Calculator</h1>
+    </header>
+    <main class="container">
+        <section id="employeeInfo">
+            <form>
+                <div class="row">
+                    <h4>Add Employee</h4>
+                </div>
+                <div class="row">
+                    <input id="firstName" class="col-sm" type="text" placeholder="First Name">
+                    <input id="lastName" class="col-sm" type="text" placeholder="Last Name">
+                    <input id="employeeId" class="col-sm" type="number" placeholder="ID">
+                    <input id="empoyeeTitle" class="col-sm" type="text" placeholder="Title">
+                    <input id="annualSalary" class="col-sm" type="number" placeholder="Annual Salary">
+                </div>
+                <div class="row">
+                    <div class="col-sm-11"></div>
+                    <button id="submitEmployee" class="btn btn-primary col-sm-1" type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+        <section id="employeesList">
+            <div class="row">
+                <h4>Employees</h4>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Annual Salary</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"></div>
+                <div class="col-sm-4">
+                    <h4>Total Monthly: <span id="totalSalary"></span></h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
