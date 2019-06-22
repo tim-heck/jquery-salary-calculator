@@ -40,7 +40,7 @@
                 <h4>Employees</h4>
             </div>
             <div class="row">
-                <table id="employeeList" class="table">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>First Name</th>
@@ -51,13 +51,15 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <!-- append employees here -->
+                    <tbody id="employeeList">
+                        <!-- jquery appends here -->
+                    </tbody>
                 </table>
             </div>
             <div class="row">
                 <div class="col-sm-8"></div>
                 <div class="col-sm-4">
-                    <h4>Total Monthly: <span id="totalSalary">0.00</span></h4>
+                    <h4>Total Monthly: <span id="totalSalary">$ 0.00</span></h4>
                 </div>
             </div>
         </section>

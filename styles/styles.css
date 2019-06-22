@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     background-color: #eee;
 }
 
@@ -30,4 +31,10 @@ form div:last-child {
 input {
     margin: 0 5px;
     border: 1px solid #000;
+}
+
+.red-background {
+    background-color: red;
+    color: #fff;
+    padding: 0 10px;
 }
