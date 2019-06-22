@@ -46,11 +46,22 @@ function showEmployee() {
         </tr>`);
         totalAnnualSalary += Number(employeeList[i].annualSalary);
     }
-    totalMonthyCost = totalAnnualSalary / 12;
-    $('#totalSalary').html('$' + totalMonthyCost.toFixed(2));
-    if (totalMonthyCost > 20000) {
+    totalMonthyCost = calcMonthlyCost(totalAnnualSalary, totalMonthyCost);
+}
+
+/**
+ * Function that calculates the total monthly cost based on the total
+ * annual salary of all employees
+ * @param {number} annualSalaryTotal total annual salary
+ * @param {number} monthlyCostTotal total monthly cost
+ */
+function calcMonthlyCost(annualSalaryTotal, monthlyCostTotal) {
+    monthlyCostTotal = annualSalaryTotal / 12;
+    $('#totalSalary').html('$' + monthlyCostTotal.toFixed(2));
+    if (monthlyCostTotal > 20000) {
         $('#totalSalary').parent().addClass('red-background');
     }
+    return monthlyCostTotal;
 }
 
 /**
