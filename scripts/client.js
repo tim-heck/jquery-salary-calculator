@@ -19,7 +19,7 @@ function storeEmployee(event) {
         title: $('#titleIn').val(),
     }
     employeeList.push(newEmployee);
-    // $('.employeeInput').val('');
+    $('.employeeInput').val('');
     showEmployee();
 }
 
