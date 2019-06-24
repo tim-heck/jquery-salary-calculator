@@ -41,12 +41,13 @@ function showEmployee() {
             <th>${employeeList[i].lastName}</th>
             <th>${employeeList[i].id}</th>
             <th>${employeeList[i].title}</th>
-            <th>$${employeeList[i].annualSalary}</th>
+            <th>$ ${employeeList[i].annualSalary}</th>
             <th><button class="btn btn-danger delete">Delete</button></th>
         </tr>`);
         totalAnnualSalary += Number(employeeList[i].annualSalary);
     }
     totalMonthyCost = calcMonthlyCost(totalAnnualSalary, totalMonthyCost);
+    $('#totalSalary').html('$' + totalMonthyCost.toFixed(2));
 }
 
 /**
@@ -57,7 +58,6 @@ function showEmployee() {
  */
 function calcMonthlyCost(annualSalaryTotal, monthlyCostTotal) {
     monthlyCostTotal = annualSalaryTotal / 12;
-    $('#totalSalary').html('$' + monthlyCostTotal.toFixed(2));
     if (monthlyCostTotal > 20000) {
         $('#totalSalary').parent().addClass('red-background');
     }
@@ -70,7 +70,6 @@ function calcMonthlyCost(annualSalaryTotal, monthlyCostTotal) {
  */
 function deleteEmployee() {
     let employeeInfo = $(this).parent().siblings().text();
-    console.log(employeeInfo);
     let employeeInfoCheck = '';
     const numOfEmployees = employeeList.length;
     for (let i = 0; i < numOfEmployees; i++) {
@@ -79,14 +78,12 @@ function deleteEmployee() {
             employeeList[i].id +
             employeeList[i].title +
             employeeList[i].annualSalary;
-        console.log(employeeInfoCheck);
         employeeInfo = employeeInfo.replace('$', '');
         if (employeeInfoCheck === employeeInfo) {
             employeeList.splice(i, 1);
             break;
         }
     }
-    console.log(employeeList);
     showEmployee();
 }
 
