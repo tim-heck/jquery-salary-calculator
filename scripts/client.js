@@ -71,8 +71,7 @@ function calcMonthlyCost(annualSalaryTotal, monthlyCostTotal) {
 function deleteEmployee() {
     let employeeInfo = $(this).parent().siblings().text();
     let employeeInfoCheck = '';
-    const numOfEmployees = employeeList.length;
-    for (let i = 0; i < numOfEmployees; i++) {
+    for (let i = 0; i < employeeList.length; i++) {
         employeeInfoCheck = employeeList[i].firstName +
             employeeList[i].lastName +
             employeeList[i].id +
