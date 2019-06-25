@@ -41,7 +41,7 @@ function showEmployee() {
             <th>${employeeList[i].lastName}</th>
             <th>${employeeList[i].id}</th>
             <th>${employeeList[i].title}</th>
-            <th>$ ${employeeList[i].annualSalary}</th>
+            <th>$${employeeList[i].annualSalary}</th>
             <th><button class="btn btn-danger delete">Delete</button></th>
         </tr>`);
         totalAnnualSalary += Number(employeeList[i].annualSalary);
